@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushtaq, Asif</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3vmin;
+            color: white;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body > .container > h1::before {
+            content: '> ';
+            color: rgb(0, 255, 0);
+        }
+        .blink {
+            animation: blink 1s linear infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mushtaq, Asif <span class="blink">_</span></h1>
+    </div>
+</body>
+</html>
