@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mushtaq, Asif</title>
+    <title>Mushtaq Asif</title>
     <style>
         * {
             box-sizing: border-box;
@@ -29,7 +29,8 @@
             content: '> ';
             color: rgb(0, 255, 0);
         }
-        .blink {
+        body > .container > h1::after{
+            content: ' _';
             animation: blink 1s linear infinite;
         }
         @keyframes blink {
@@ -41,7 +42,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Mushtaq, Asif <span class="blink">_</span></h1>
+        <h1>Mushtaq Asif</h1>
     </div>
 </body>
 </html>
