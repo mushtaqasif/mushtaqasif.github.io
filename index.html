@@ -25,17 +25,30 @@
             justify-content: center;
             align-items: center;
         }
+        body > .container > h1 {
+            animation: textflicker 0.01s alternate infinite;
+            filter: blur(1px);
+        }
         body > .container > h1::before {
             content: '> ';
             color: rgb(0, 255, 0);
+            animation: textflicker 0.01s alternate infinite;
         }
         body > .container > h1::after{
             content: ' _';
             color: rgb(0, 255, 0);
-            animation: blink .75s step-end infinite;
+            animation: blink .75s step-end infinite, textflicker 0.01s alternate infinite;
         }
         @keyframes blink {
             50% { opacity: 0; }
+        }
+        @keyframes textflicker {
+            from {
+            text-shadow: .5vmin 0 0 #ea36af, -.5vmin 0 0 #75fa69;
+            }
+            to {
+            text-shadow: 1vmin 0.5vmin 1vmin #ea36af, 0vmin -0.5vmin 2vmin #75fa69;
+            }
         }
     </style>
 </head>
