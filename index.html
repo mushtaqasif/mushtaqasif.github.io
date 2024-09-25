@@ -25,6 +25,25 @@
             justify-content: center;
             align-items: center;
         }
+        body > .container:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2147483648;
+            content: "";
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(150, 150, 150, 0.3) 51%
+            ),  linear-gradient(
+                to right,
+                transparent 50%,
+                rgba(150, 150, 150, 0.3) 51%
+            );
+            background-size: .5vmin .5vmin;
+        }
         body > .container > h1 {
             animation: textflicker 0.01s alternate infinite;
             filter: blur(1px);
